@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/partedos.css">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Puedes llevar hasta 10 stickers en total</h1>
+        <div class="images">
+            <div class="image-container">
+                <img src="./assets/img/JScript.png" alt="Sticker 1">
+                <input type="text" id="input1" value="0">
+            </div>
+            <div class="image-container">
+                <img src="./assets/img/css.png" alt="Sticker 2">
+                <input type="text" id="input2" value="0">
+            </div>
+            <div class="image-container">
+                <img src="./assets/img/html.png" alt="Sticker 3">
+                <input type="text" id="input3" value="0">
+            </div>
+        </div>
+        <div class="warning" id="warning">
+            <span></span>
+        </div>
+        <button onclick="
+        const input1 = Number(document.getElementById('input1').value)
+        const input2 = Number(document.getElementById('input2').value)
+        const input3 = Number(document.getElementById('input3').value)
+        const total = input1 + input2 + input3
+        const warning = document.querySelector('span')
+        if (total > 10) {
+            warning.innerHTML = 'Llevas demasiados stickers';
+        } else {
+            warning.innerHTML = 'Llevas ' + total + ' stickers';
+        }
+    ">Verificar</button>
+
+    <p>
+        <a href="./index.html" target="_self" rel="noopener noreferrer">Ejercicio Anterior</a> &nsc; <a href="./partetres.html" target="_self" rel="noopener noreferrer">Siguiente Ejercicio</a>
+    </p>
+    </div>
+
+    
+</body>
+</html>
